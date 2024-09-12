@@ -38,8 +38,5 @@ cbar.set_ticklabels(['Baja humedad', 'Humedad moderada', 'Alta humedad'])
 # Ajustar la visualización
 plt.tight_layout()
 
-# Mostrar la imagen
-plt.show()
-
-# Opcionalmente, guardar la imagen
+# Guardar la imagen
 plt.savefig('NDMI_visualization.png', dpi=300, bbox_inches='tight')

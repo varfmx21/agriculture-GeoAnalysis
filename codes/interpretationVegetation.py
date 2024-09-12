@@ -40,8 +40,5 @@ cbar.set_ticklabels(['Baja vegetación', 'Vegetación moderada', 'Alta vegetaci�
 # Ajustar la visualización
 plt.tight_layout()
 
-# Mostrar la imagen
-plt.show()
-
-# Opcionalmente, guardar la imagen
+# Guardar la imagen
 plt.savefig('NDVI_visualization.png', dpi=300, bbox_inches='tight')
