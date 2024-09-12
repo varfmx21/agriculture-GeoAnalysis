@@ -44,4 +44,4 @@ plt.tight_layout()
 plt.show()
 
 # Opcionalmente, guardar la imagen
-plt.savefig('NDVI_visualization_improved.png', dpi=300, bbox_inches='tight')
+plt.savefig('NDVI_visualization.png', dpi=300, bbox_inches='tight')
