@@ -31,5 +31,9 @@ def vegetacion():
 def fertilidad():
     return render_template('fertilidad.html')
 
+@app.route('/mapa')
+def mapa():
+    return render_template('mapa.html')
+
 if __name__== '_main_':
     app.run(host='127.0.0.1', port=8000, debug=True)
