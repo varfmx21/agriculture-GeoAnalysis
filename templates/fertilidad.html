@@ -43,7 +43,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/BSI_visualization.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -86,7 +88,32 @@
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Descripcion</p>
                                         </div>
-                                        <div class="card-body"></div>
+                                        <div class="card-body">
+                                            <h5>Análisis del Mapa de la Zona Metropolitana de Guadalajara con Índice de Esterilidad del Suelo (BSI)</h5>
+                                            <p><strong>Leyenda del Mapa:</strong></p>
+                                            <p>
+                                                La leyenda a la derecha muestra una escala de colores que representa el índice de esterilidad del suelo (BSI), que varía de acuerdo a la fertilidad del terreno:
+                                                <ul>
+                                                    <li><strong>Suelos fértiles:</strong> Colores claros (grises o marrones) indican áreas con suelos fértiles.</li>
+                                                    <li><strong>Suelos moderadamente estériles:</strong> Tonos verdosos y amarillos reflejan áreas con niveles intermedios de fertilidad o esterilidad.</li>
+                                                    <li><strong>Suelos muy estériles:</strong> Tonos azules y púrpuras indican zonas con suelos altamente estériles.</li>
+                                                </ul>
+                                            </p>
+                                            <p><strong>Explicación del Índice de Esterilidad del Suelo (BSI):</strong></p>
+                                            <p>
+                                                El <strong>BSI (Bare Soil Index)</strong> es un índice que detecta áreas de suelo desnudo o con baja cobertura vegetal, lo cual puede estar relacionado con condiciones de infertilidad o degradación del terreno. Un valor alto de BSI sugiere suelo estéril, mientras que un valor bajo indica vegetación y fertilidad.
+                                            </p>
+                                            <p><strong>Análisis Visual de la Zona Metropolitana de Guadalajara:</strong></p>
+                                            <p>
+                                                - Las áreas urbanas y superficies duras tienden a mostrar colores que indican suelos más estériles (azul a púrpura). <br>
+                                                - Las zonas con verde claro y amarillo representan áreas rurales con algún nivel de fertilidad o potencial agrícola. <br>
+                                                - Las áreas con azul intenso o púrpura muestran un alto nivel de esterilidad, posiblemente debido a erosión o urbanización.
+                                            </p>
+                                            <p><strong>Conclusión:</strong></p>
+                                            <p>
+                                                Este mapa ofrece una visión clara de la condición de los suelos en Guadalajara, destacando áreas con potencial agrícola y zonas que podrían requerir intervención para mejorar la calidad del suelo.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

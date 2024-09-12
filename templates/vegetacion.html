@@ -44,6 +44,7 @@
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
                                     <div class="mb-3"></div>
+                                    <img src="{{ url_for('static', filename='data/NDVI_visualization.png') }}" alt="XXD" style="width: 380px;">
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -86,7 +87,40 @@
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Descripcion</p>
                                         </div>
-                                        <div class="card-body"></div>
+                                        <div class="card-body">
+                                            <h5>Análisis del Mapa de la Zona Metropolitana de Guadalajara con el Índice de Vegetación de Diferencia Normalizada (NDVI) para el Sector Ganadero</h5>
+                                            <p><strong>Leyenda del Mapa:</strong></p>
+                                            <p>
+                                                La leyenda a la derecha del mapa muestra la escala de vegetación del suelo mediante el <strong>Índice de Vegetación de Diferencia Normalizada (NDVI)</strong>. Los colores representan los siguientes niveles de vegetación:
+                                                <ul>
+                                                    <li><strong>Alta vegetación:</strong> Zonas en verde oscuro indican áreas con abundante vegetación, ideales para el pastoreo y la producción ganadera.</li>
+                                                    <li><strong>Vegetación moderada:</strong> Zonas en tonos amarillos sugieren niveles medios de vegetación, donde se puede optimizar el crecimiento de pastizales con manejo adecuado.</li>
+                                                    <li><strong>Baja vegetación:</strong> Zonas rojas y naranjas representan suelos con poca o ninguna vegetación, lo que puede afectar la producción de forraje y requerir mejoras en el uso de la tierra.</li>
+                                                </ul>
+                                            </p>
+                                            <p><strong>Explicación del Índice de Vegetación de Diferencia Normalizada (NDVI):</strong></p>
+                                            <p>
+                                                El <strong>NDVI (Normalized Difference Vegetation Index)</strong> mide la cantidad de vegetación en una zona específica. Esto es importante para los ganaderos ya que permite identificar áreas con buen crecimiento de plantas y áreas que necesitan intervención:
+                                                <ul>
+                                                    <li>Valores altos (verde) indican una vegetación abundante, útil para el pastoreo extensivo.</li>
+                                                    <li>Valores bajos (rojo) representan áreas sin suficiente cobertura vegetal, lo que puede ser perjudicial para el ganado y requerir reforestación o riego.</li>
+                                                </ul>
+                                            </p>
+                                            <p><strong>Análisis Visual de la Zona Metropolitana de Guadalajara:</strong></p>
+                                            <p>
+                                                - Las áreas en <strong>verde oscuro</strong> muestran zonas con abundante vegetación, las cuales son las más propicias para el pastoreo y la cría de ganado.<br>
+                                                - Las áreas en <strong>rojo y naranja</strong> carecen de vegetación suficiente, lo que podría representar terrenos poco productivos sin intervención.<br>
+                                                - En particular, el área al noreste parece tener una cobertura vegetal más densa, lo que la hace favorable para actividades agrícolas y ganaderas.
+                                            </p>
+                                            <p><strong>Implicaciones para el Sector Ganadero:</strong></p>
+                                            <p>
+                                                Las zonas con baja vegetación podrían requerir mejoras en la gestión de la tierra, como la implementación de riego o técnicas de reforestación, para mejorar la producción de pastizales y garantizar el sustento adecuado para el ganado.
+                                            </p>
+                                            <p><strong>Conclusión:</strong></p>
+                                            <p>
+                                                Este mapa NDVI proporciona información clave para los ganaderos, ayudándolos a identificar las áreas más productivas y las que requieren intervención para mejorar la productividad del terreno.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

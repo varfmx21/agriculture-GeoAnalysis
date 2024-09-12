@@ -43,7 +43,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/NDMI_visualization.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -86,7 +88,40 @@
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Descripcion</p>
                                         </div>
-                                        <div class="card-body"></div>
+                                        <div class="card-body">
+                                            <h5>Análisis del Mapa de la Zona Metropolitana de Guadalajara con el Índice de Diferencia Normalizada de Humedad (NDMI) para el Sector Ganadero</h5>
+                                            <p><strong>Leyenda del Mapa:</strong></p>
+                                            <p>
+                                                La leyenda a la derecha del mapa muestra la escala de humedad del suelo mediante el <strong>Índice de Diferencia Normalizada de Humedad (NDMI)</strong>. Los colores representan los siguientes niveles de humedad en el terreno:
+                                                <ul>
+                                                    <li><strong>Alta humedad:</strong> Zonas en azul indican alta disponibilidad de humedad, favorable para el crecimiento de pastos y vegetación.</li>
+                                                    <li><strong>Humedad moderada:</strong> Zonas en amarillo muestran niveles medios de humedad, donde podría ser necesario riego adicional.</li>
+                                                    <li><strong>Baja humedad:</strong> Zonas rojas y naranjas representan suelos secos, menos aptos para la producción ganadera sin intervención.</li>
+                                                </ul>
+                                            </p>
+                                            <p><strong>Explicación del Índice de Diferencia Normalizada de Humedad (NDMI):</strong></p>
+                                            <p>
+                                                El <strong>NDMI (Normalized Difference Moisture Index)</strong> mide el contenido de humedad en el suelo y la vegetación, esencial para actividades agrícolas y ganaderas:
+                                                <ul>
+                                                    <li>Valores altos (azul) indican alta retención de humedad, crucial para mantener pastizales saludables y agua para el ganado.</li>
+                                                    <li>Valores bajos (rojo) indican suelos secos, afectando el forraje y la salud del ganado, requiriendo intervención.</li>
+                                                </ul>
+                                            </p>
+                                            <p><strong>Análisis Visual de la Zona Metropolitana de Guadalajara:</strong></p>
+                                            <p>
+                                                - Áreas con <strong>tonos azules</strong> son ideales para actividades ganaderas por su alta humedad.<br>
+                                                - Áreas <strong>rojas y naranjas</strong> tienen baja humedad, requiriendo mejoras como sistemas de irrigación para sostener la productividad ganadera.<br>
+                                                - La región noroeste presenta zonas con alta a moderada humedad, con potencial para la expansión ganadera.
+                                            </p>
+                                            <p><strong>Implicaciones para el Sector Ganadero:</strong></p>
+                                            <p>
+                                                La disponibilidad de humedad es clave para el pasto y forraje. Zonas de baja humedad requieren atención y mejoras en infraestructura de riego. Áreas azules son ideales para la producción ganadera sin necesidad de intervención adicional.
+                                            </p>
+                                            <p><strong>Conclusión:</strong></p>
+                                            <p>
+                                                El mapa NDMI es útil para ganaderos al identificar zonas con alta retención de humedad, y aquellas donde se deben aplicar estrategias de manejo del agua para mejorar la productividad del terreno.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
