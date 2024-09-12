@@ -21,7 +21,7 @@
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}"><i class="fas fa-tachometer-alt"></i><span>General</span></a></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('humedad') }}"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link" href="{{ url_for('temperatura') }}"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link" href="{{ url_for('precipitacion') }}"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link" href="{{ url_for('vegetacion') }}"><i class="fas fa-table"></i><span>Vegetacion</span><a class="nav-link" href="{{ url_for('fertilidad') }}"><i class="fas fa-table"></i><span>fertilidad del suelo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('humedad') }}"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link" href="{{ url_for('temperatura') }}"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link" href="{{ url_for('precipitacion') }}"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link" href="{{ url_for('vegetacion') }}"><i class="fas fa-table"></i><span>Vegetacion</span><a class="nav-link" href="{{ url_for('fertilidad') }}"><i class="fas fa-table"></i><span>fertilidad del suelo</span></a><a class="nav-link" href="{{ url_for('mapa') }}"><i class="fas fa-table"></i><span>Mapa interactivo</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
@@ -44,7 +44,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/temp_normales_zapopan.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -87,7 +89,41 @@
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Descripcion</p>
                                         </div>
-                                        <div class="card-body"></div>
+                                        <div class="card-body">
+                                            <h3>Interpretación de Temperaturas Normales en Zapopan para el Sector Agrícola</h3>
+                                            <p>Este gráfico muestra las <strong>temperaturas normales</strong> para la región de Zapopan (1991-2020), con tres variables clave para el sector agrícola:</p>
+                                            
+                                            <h4>1. Temperatura Máxima (en rojo)</h4>
+                                            <ul>
+                                                <li>La temperatura más alta se registra en <strong>mayo</strong> con alrededor de <strong>33.9°C</strong>.</li>
+                                                <li>Los meses más cálidos, de marzo a junio, presentan temperaturas por encima de los <strong>30°C</strong>, lo que es importante para cultivos sensibles al calor.</li>
+                                                <li>Desde <strong>julio</strong> hasta diciembre, las temperaturas máximas descienden, lo que puede indicar un periodo más favorable para ciertos cultivos que requieren temperaturas moderadas.</li>
+                                            </ul>
+                                            
+                                            <h4>2. Temperatura Mínima (en azul)</h4>
+                                            <ul>
+                                                <li>Las mínimas más frías se dan en <strong>enero</strong> (cerca de <strong>8°C</strong>) y <strong>diciembre</strong>, lo que indica riesgo de <strong>heladas ligeras</strong> o <strong>frío nocturno</strong> para cultivos susceptibles.</li>
+                                                <li>Las temperaturas mínimas suben de marzo a septiembre, lo que sugiere condiciones más estables para la mayoría de los cultivos.</li>
+                                            </ul>
+                                            
+                                            <h4>3. Temperatura Media (en verde)</h4>
+                                            <ul>
+                                                <li>La temperatura media más alta es en <strong>mayo</strong> (<strong>24.9°C</strong>), lo que significa condiciones más cálidas pero no extremas, que pueden ser beneficiosas para cultivos como el maíz o la caña de azúcar.</li>
+                                                <li>El periodo entre <strong>marzo y octubre</strong> ofrece un clima templado, con medias entre <strong>20°C y 24°C</strong>, ideal para la mayoría de los cultivos que requieren temperaturas moderadas.</li>
+                                            </ul>
+                                            
+                                            <h4>Interpretación Agrícola</h4>
+                                            <p>
+                                                Los meses más cálidos (marzo a junio) pueden ser desafiantes para cultivos sensibles al <strong>estrés térmico</strong>, y es probable que se requiera riego adicional. 
+                                                Las temperaturas más frescas en invierno (diciembre y enero) podrían necesitar estrategias de <strong>protección contra heladas</strong> para cultivos perennes o sensibles como las hortalizas. 
+                                                El ciclo de siembra puede beneficiarse si se programa de acuerdo con las temperaturas óptimas de crecimiento (marzo a octubre), cuando las temperaturas medias son más favorables para una amplia gama de productos agrícolas.
+                                            </p>
+
+                                            <h4>Conclusión</h4>
+                                            <p>
+                                                Este patrón climático sugiere un <strong>ambiente cálido-templado</strong> adecuado para diversos cultivos durante la mayor parte del año, aunque con la necesidad de monitorear y gestionar el calor extremo en mayo y el frío en invierno.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +133,9 @@
                     <div class="col-lg-4">
                         <div class="card mb-3">
                             <div class="card-body text-center shadow">
-                                <div class="mb-3"></div>
+                                <div class="mb-3">
+                                    <img src="{{ url_for('static', filename='data/temp_normales_guadalajara.png') }}" alt="XXD" style="width: 380px;">
+                                </div>
                             </div>
                         </div>
                         <div class="card shadow mb-4"></div>
@@ -108,14 +146,51 @@
                             <div class="card-header py-3">
                                 <p class="text-primary m-0 fw-bold">Descripcion</p>
                             </div>
-                            <div class="card-body"></div>
+                            <div class="card-body">
+                                <h3>Interpretación de Temperaturas Normales en Guadalajara para el Sector Agrícola</h3>
+    
+                                <p>Este gráfico muestra las <strong>temperaturas normales</strong> en la región de Guadalajara (1991-2020), resaltando tres variables clave que impactan el sector agrícola:</p>
+                                
+                                <h4>1. Temperatura Máxima (en rojo)</h4>
+                                <ul>
+                                    <li>La temperatura máxima alcanza su punto más alto en <strong>mayo</strong> con alrededor de <strong>34°C</strong>.</li>
+                                    <li>Los meses más cálidos, entre marzo y junio, presentan temperaturas superiores a <strong>30°C</strong>, lo que puede ser crítico para cultivos sensibles a las altas temperaturas y puede requerir estrategias de <strong>manejo de estrés térmico</strong>.</li>
+                                    <li>Desde <strong>julio</strong> hasta diciembre, las temperaturas máximas descienden, brindando condiciones más favorables para ciertos cultivos que prefieren temperaturas moderadas.</li>
+                                </ul>
+                                
+                                <h4>2. Temperatura Mínima (en azul)</h4>
+                                <ul>
+                                    <li>Las temperaturas mínimas más frías se presentan en <strong>enero</strong> y <strong>diciembre</strong>, cercanas a los <strong>8°C</strong>, lo que puede representar riesgo de <strong>heladas ligeras</strong> o <strong>estrés por frío</strong> en cultivos sensibles durante el invierno.</li>
+                                    <li>De <strong>marzo a septiembre</strong>, las mínimas son más altas, proporcionando condiciones más estables para la mayoría de los cultivos.</li>
+                                </ul>
+                                
+                                <h4>3. Temperatura Media (en verde)</h4>
+                                <ul>
+                                    <li>La temperatura media más alta se registra en <strong>mayo</strong> con aproximadamente <strong>25°C</strong>, lo que sugiere condiciones cálidas pero no extremas, adecuadas para una variedad de cultivos como maíz, frijol y otros granos.</li>
+                                    <li>Entre <strong>marzo y octubre</strong>, las temperaturas medias oscilan entre <strong>20°C y 25°C</strong>, lo que crea un ambiente favorable para cultivos que requieren temperaturas moderadas durante su desarrollo.</li>
+                                </ul>
+                                
+                                <h4>Interpretación Agrícola</h4>
+                                <p>
+                                    El periodo más cálido, de <strong>marzo a junio</strong>, puede representar un desafío para cultivos susceptibles a las altas temperaturas, por lo que se recomienda un manejo adecuado del riego para evitar el <strong>estrés hídrico</strong>. 
+                                    Los meses de <strong>diciembre a febrero</strong> presentan temperaturas más frías, lo que puede requerir medidas de protección para evitar daños por heladas ligeras en cultivos sensibles.
+                                    En general, la región ofrece un clima adecuado para una variedad de cultivos si se gestionan adecuadamente las fluctuaciones de temperatura.
+                                </p>
+
+                                <h4>Conclusión</h4>
+                                <p>
+                                    La región de Guadalajara presenta un clima <strong>templado-cálido</strong> ideal para el crecimiento de diversos cultivos, especialmente en los meses de marzo a octubre, aunque se debe tener cuidado con las temperaturas extremas en mayo y las bajas temperaturas en invierno.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <h3 class="text-dark mb-4"><br><span style="color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));">Tlaquepaque</span>, Jalisco</h3>
                     <div class="col-lg-4">
                         <div class="card mb-3">
                             <div class="card-body text-center shadow">
-                                <div class="mb-3"></div>
+                                <div class="mb-3">
+                                    <img src="{{ url_for('static', filename='data/temp_normales_tlaquepaque.png') }}" alt="XXD" style="width: 380px;">
+                                </div>
                             </div>
                         </div>
                         <div class="card shadow mb-4"></div>
@@ -126,14 +201,49 @@
                             <div class="card-header py-3">
                                 <p class="text-primary m-0 fw-bold">Descripcion</p>
                             </div>
-                            <div class="card-body"></div>
+                            <div class="card-body">
+                                <h3>Interpretación de Temperaturas Normales en Tlaquepaque para el Sector Agrícola</h3>
+
+                                <p>Este gráfico muestra las <strong>temperaturas normales</strong> en la región de Tlaquepaque (1991-2020), destacando tres variables clave que impactan el sector agrícola:</p>
+
+                                <h4>1. Temperatura Máxima (en rojo)</h4>
+                                <ul>
+                                    <li>La temperatura máxima alcanza su punto más alto en <strong>mayo y junio</strong> con alrededor de <strong>32°C</strong>.</li>
+                                    <li>Los meses más cálidos, entre marzo y julio, presentan temperaturas superiores a <strong>30°C</strong>, lo que puede afectar a cultivos sensibles al calor extremo, requiriendo estrategias de <strong>manejo de estrés térmico</strong> y una irrigación adecuada.</li>
+                                    <li>Desde <strong>septiembre</strong> hasta diciembre, las temperaturas máximas descienden, ofreciendo mejores condiciones para cultivos que prefieren temperaturas moderadas.</li>
+                                </ul>
+
+                                <h4>2. Temperatura Mínima (en azul)</h4>
+                                <ul>
+                                    <li>Las temperaturas mínimas más frías se presentan en <strong>diciembre y enero</strong>, con temperaturas cercanas a los <strong>10°C</strong>. Esto puede representar un riesgo de <strong>heladas ligeras</strong> o <strong>estrés por frío</strong> para cultivos sensibles durante el invierno.</li>
+                                    <li>De <strong>marzo a agosto</strong>, las mínimas se elevan, brindando condiciones más estables y favorables para la mayoría de los cultivos.</li>
+                                </ul>
+
+                                <h4>3. Temperatura Media (en verde)</h4>
+                                <ul>
+                                    <li>La temperatura media más alta se registra en <strong>mayo y junio</strong> con aproximadamente <strong>25°C</strong>, lo que sugiere condiciones cálidas pero no extremas, adecuadas para una variedad de cultivos como hortalizas y cereales.</li>
+                                    <li>Entre <strong>marzo y octubre</strong>, las temperaturas medias oscilan entre <strong>20°C y 25°C</strong>, proporcionando un entorno favorable para cultivos que requieren temperaturas moderadas durante su crecimiento.</li>
+                                </ul>
+
+                                <h4>Interpretación Agrícola</h4>
+                                <p>
+                                    El periodo más cálido, de <strong>marzo a julio</strong>, puede ser un desafío para cultivos que no toleran bien las altas temperaturas. Se recomienda un manejo adecuado del riego para evitar el <strong>estrés hídrico</strong> durante estos meses. Los meses de <strong>diciembre a febrero</strong> presentan temperaturas más bajas, por lo que los cultivos sensibles a las heladas necesitarán medidas de protección adicionales.
+                                </p>
+
+                                <h4>Conclusión</h4>
+                                <p>
+                                    La región de Tlaquepaque ofrece un clima <strong>templado-cálido</strong> ideal para una variedad de cultivos. Sin embargo, es necesario gestionar bien las temperaturas extremas en mayo y junio, así como las mínimas en invierno, para optimizar los rendimientos agrícolas.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <h3 class="text-dark mb-4">Tonala, Jalisco</h3>
                     <div class="col-lg-4">
                         <div class="card mb-3">
                             <div class="card-body text-center shadow">
-                                <div class="mb-3"></div>
+                                <div class="mb-3">
+                                    <img src="{{ url_for('static', filename='data/temp_normales_tonala.png') }}" alt="XXD" style="width: 380px;">
+                                </div>
                             </div>
                         </div>
                         <div class="card shadow mb-4"></div>
@@ -144,7 +254,9 @@
                             <div class="card-header py-3">
                                 <p class="text-primary m-0 fw-bold">Descripcion</p>
                             </div>
-                            <div class="card-body"></div>
+                            <div class="card-body">
+                                <h3>Interpretación de Temperaturas Normales en Tonalá para el Sector Agrícola</h3> <p>Este gráfico muestra las <strong>temperaturas normales</strong> en la región de Tonalá (1991-2020), destacando tres variables clave que impactan el sector agrícola:</p> <h4>1. Temperatura Máxima (en rojo)</h4> <ul> <li>La temperatura máxima alcanza su punto más alto en <strong>mayo y junio</strong> con alrededor de <strong>32°C</strong>.</li> <li>Los meses más cálidos, entre abril y septiembre, presentan temperaturas superiores a <strong>30°C</strong>, lo que puede afectar a cultivos sensibles al calor extremo, requiriendo estrategias de <strong>manejo de estrés térmico</strong> y una irrigación adecuada.</li> <li>Desde <strong>octubre</strong> hasta diciembre, las temperaturas máximas disminuyen, ofreciendo mejores condiciones para cultivos que prefieren temperaturas moderadas.</li> </ul> <h4>2. Temperatura Mínima (en azul)</h4> <ul> <li>Las temperaturas mínimas más frías se presentan en <strong>diciembre y enero</strong>, con temperaturas cercanas a los <strong>10°C</strong>. Esto puede representar un riesgo de <strong>heladas ligeras</strong> o <strong>estrés por frío</strong> para cultivos sensibles durante el invierno.</li> <li>De <strong>marzo a septiembre</strong>, las mínimas aumentan, proporcionando condiciones más estables y favorables para la mayoría de los cultivos.</li> </ul> <h4>3. Temperatura Media (en verde)</h4> <ul> <li>La temperatura media más alta se registra en <strong>mayo y junio</strong> con aproximadamente <strong>25°C</strong>, lo que sugiere condiciones cálidas pero no extremas, adecuadas para una variedad de cultivos como maíz y hortalizas.</li> <li>Entre <strong>abril y septiembre</strong>, las temperaturas medias oscilan entre <strong>20°C y 25°C</strong>, creando un entorno favorable para cultivos que requieren temperaturas moderadas durante su desarrollo.</li> </ul> <h4>Interpretación Agrícola</h4> <p> El periodo más cálido, de <strong>abril a septiembre</strong>, puede representar un desafío para cultivos susceptibles a las altas temperaturas. Se recomienda un manejo adecuado del riego para evitar el <strong>estrés hídrico</strong> en los meses más cálidos. Los meses de <strong>diciembre a febrero</strong> presentan temperaturas más frías, por lo que se deben tomar precauciones con cultivos sensibles a las heladas. </p> <h4>Conclusión</h4> <p> La región de Tonalá ofrece un clima <strong>templado-cálido</strong> favorable para una variedad de cultivos. Sin embargo, es importante gestionar bien las temperaturas extremas en los meses de mayo y junio, y proteger los cultivos durante los meses fríos de invierno para asegurar buenos rendimientos agrícolas. </p>
+                            </div>
                         </div>
                     </div>
                     <div class="card shadow mb-5"></div>

@@ -21,7 +21,7 @@
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}"><i class="fas fa-tachometer-alt"></i><span>General</span></a></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('humedad') }}"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link" href="{{ url_for('temperatura') }}"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link" href="{{ url_for('precipitacion') }}"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link" href="{{ url_for('vegetacion') }}"><i class="fas fa-table"></i><span>Vegetacion</span><a class="nav-link" href="{{ url_for('fertilidad') }}"><i class="fas fa-table"></i><span>fertilidad del suelo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('humedad') }}"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link" href="{{ url_for('temperatura') }}"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link" href="{{ url_for('precipitacion') }}"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link" href="{{ url_for('vegetacion') }}"><i class="fas fa-table"></i><span>Vegetacion</span><a class="nav-link" href="{{ url_for('fertilidad') }}"><i class="fas fa-table"></i><span>fertilidad del suelo</span></a><a class="nav-link" href="{{ url_for('mapa') }}"><i class="fas fa-table"></i><span>Mapa interactivo</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
@@ -44,7 +44,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/prec_normal_zapopan.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -87,7 +89,9 @@
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Descripcion</p>
                                         </div>
-                                        <div class="card-body"></div>
+                                        <div class="card-body">
+                                            <h3>Interpretación de Precipitación Normal en Zapopan para el Sector Agrícola</h3> <p>Este gráfico muestra la <strong>precipitación normal</strong> en Zapopan (1991-2020), indicando los patrones de lluvia a lo largo del año, un factor crucial para la planificación agrícola.</p> <h4>1. Estación Lluviosa (Junio a Septiembre)</h4> <ul> <li>La mayor cantidad de precipitación se concentra en los meses de <strong>junio a septiembre</strong>, con un pico máximo en <strong>julio</strong>, que registra aproximadamente <strong>250 mm</strong> de lluvia.</li> <li>Estos meses son esenciales para el crecimiento de cultivos de temporada como el maíz, sorgo y frijol, que dependen de lluvias abundantes.</li> <li>Es importante aprovechar esta fase para realizar una adecuada captación y almacenamiento de agua, ya que la disponibilidad hídrica es alta.</li> </ul> <h4>2. Estación Seca (Noviembre a Abril)</h4> <ul> <li>La precipitación es mínima entre <strong>noviembre y abril</strong>, con niveles que apenas alcanzan los <strong>10 mm</strong> en algunos meses.</li> <li>En esta temporada, el riego es fundamental para mantener la producción de cultivos que requieren agua de manera constante, como hortalizas.</li> <li>Los productores deben planificar el uso de sistemas de riego eficiente y manejo de reservas de agua para evitar pérdidas en los cultivos.</li> </ul> <h4>3. Meses de Transición (Mayo y Octubre)</h4> <ul> <li><strong>Mayo</strong> y <strong>octubre</strong> actúan como meses de transición, donde las lluvias comienzan a aumentar o disminuir. Mayo tiene alrededor de <strong>50 mm</strong> de precipitación, y octubre recibe unos <strong>60 mm</strong>.</li> <li>En estos periodos, es crucial ajustar las prácticas agrícolas para adaptarse a las variaciones climáticas, especialmente para cultivos que están en fase de maduración o cosecha.</li> </ul> <h4>Interpretación Agrícola</h4> <p> La temporada de lluvias, de <strong>junio a septiembre</strong>, es el mejor momento para sembrar cultivos que requieren abundante agua, mientras que los meses secos demandan una planificación eficiente del riego para mantener la producción. Es recomendable optimizar la captación de agua durante la estación lluviosa y emplear técnicas de irrigación durante la estación seca para garantizar el éxito de la producción agrícola. </p> <h4>Conclusión</h4> <p> Zapopan presenta una distribución de precipitaciones marcada, con una estación lluviosa pronunciada que beneficia a los cultivos de temporada, pero también requiere una buena planificación del riego durante los meses secos para asegurar un rendimiento agrícola constante durante todo el año. </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +105,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/prec_normal_guadalajara.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -158,7 +164,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/prec_normal_tlaquepaque.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
@@ -215,7 +223,9 @@
                         <div class="col-lg-4">
                             <div class="card mb-3">
                                 <div class="card-body text-center shadow">
-                                    <div class="mb-3"></div>
+                                    <div class="mb-3">
+                                        <img src="{{ url_for('static', filename='data/prec_normal_tonala.png') }}" alt="XXD" style="width: 380px;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4"></div>
