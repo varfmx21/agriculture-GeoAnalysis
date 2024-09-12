@@ -23,5 +23,9 @@ def precipitacion():
 def temperatura():
     return render_template('temperatura.html')
 
+@app.route('/vegetacion')
+def vegetacion():
+    return render_template('vegetacion.html')
+
 if __name__== '_main_':
     app.run(host='127.0.0.1', port=8000, debug=True)
