@@ -15,7 +15,7 @@ datacube = connection.load_collection(
     "east": -103.2225,  # Coordenada este
     "north": 20.7950},  # Coordenada norte
     temporal_extent=["2024-04-01", "2024-09-10"],
-    bands=["B04", "B08"],  # Bandas: Green (B03), NIR (B08)
+    bands=["B04", "B08"],  # Bandas: Red (B03), NIR (B08)
     max_cloud_cover=85,
 )
 
