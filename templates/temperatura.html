@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Profile - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-all.min.css') }}">
 </head>
 
 <body id="page-top">
@@ -19,9 +19,9 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>General</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}"><i class="fas fa-tachometer-alt"></i><span>General</span></a></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link active" href="temperatura.html"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link active" href="temperatura.html"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link active" href="temperatura.html"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link active" href="temperatura.html"><i class="fas fa-table"></i><span>Vegetacion</span></a><a class="nav-link active" href="temperatura.html"><i class="fas fa-table"></i><span>Fertilidad</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('humedad') }}"><i class="fas fa-table"></i><span>Humedad del suelo</span></a><a class="nav-link" href="{{ url_for('temperatura') }}"><i class="fas fa-table"></i><span>Temperatura</span></a><a class="nav-link" href="{{ url_for('precipitacion') }}"><i class="fas fa-table"></i><span>Precipitacion</span></a><a class="nav-link" href="{{ url_for('vegetacion') }}"><i class="fas fa-table"></i><span>Vegetacion</span><a class="nav-link" href="{{ url_for('fertilidad') }}"><i class="fas fa-table"></i><span>fertilidad del suelo</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
