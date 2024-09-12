@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Python\src\AgroDataThon\agriculture-GeoAnalysis\.venv"
+VIRTUAL_ENV="C:\Users\jrvmz\OneDrive\Documentos\Academic\TEC\Hackathon\AgroDataThon\agriculture-GeoAnalysis\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
