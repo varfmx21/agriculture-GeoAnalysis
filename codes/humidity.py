@@ -15,23 +15,19 @@ datacube = connection.load_collection(
     "east": -103.2225,  # Coordenada este
     "north": 20.7950},    # Coordenada norte
     temporal_extent=["2024-04-01", "2024-09-10"],
-    bands=["B02", "B04", "B08"],  # Bandas disponibles: Blue (B02), Red (B04), NIR (B08)
+    bands=["B08", "B11"],  # Bandas disponibles:  NIR (B08), SWIR (B11)
     max_cloud_cover=85,
 )
 
 # Selección de bandas y cálculo de reflectancias físicas
-blue = datacube.band("B02") * 0.0001
-red = datacube.band("B04") * 0.0001
 nir = datacube.band("B08") * 0.0001
+swir = datacube.band("B11") * 0.0001
 
-# Cálculo del Índice de Vegetación de Diferencia Normalizada (NDVI)
-ndvi = (nir - red) / (nir + red)
-
-# Cálculo del Índice de Humedad del Suelo (SMI) 
-soil_moisture_index = ndvi / (1 - ndvi)
+# Cálculo del Índice de Humedad de Diferencia Normalizada (NDMI)
+ndmi = (nir - swir) / (nir + swir)
 
 # Eliminación de la dimensión temporal tomando el valor medio por píxel
-soil_moisture_composite = soil_moisture_index.mean_time()
+ndmi_composite = ndmi.mean_time()
 
 # Descarga del resultado como archivo GeoTIFF
-soil_moisture_composite.download("humidity.tiff")
+ndmi_composite.download("NDMI.tiff")
